@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import Index
-
+from . import views
 
 urlpatterns = [
-    path('', Index.as_view(), name='converter')
+    path('', views.convert_document, name='convert_document'),
+    path('document/<int:pk>/', views.document_detail, name='document_detail'),
 ]
