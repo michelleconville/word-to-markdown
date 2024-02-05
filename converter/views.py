@@ -6,6 +6,7 @@ from markdown import markdown
 from docx import Document as DocxDocument
 from .models import Document
 import os
+from django.http import HttpResponse
 
 
 def convert_to_markdown(docx_content):
@@ -42,3 +43,12 @@ def convert_document(request):
 def document_detail(request, pk):
     document = Document.objects.get(pk=pk)
     return render(request, 'converter/document_detail.html', {'document': document})
+
+
+def download_markdown(request, pk):
+    document = Document.objects.get(pk=pk)
+    markdown_content = document.markdown_content
+ 
+    response = HttpResponse(markdown_content, content_type='text/markdown')
+    response['Content-Disposition'] = 'attachment; filename="markdown_file.md"'
+    return response

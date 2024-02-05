@@ -2,4 +2,5 @@
 {% block content %}
 <h2>Markdown Content</h2>
 <pre>{{ document.markdown_content }}</pre>
+<a href="{% url 'download_markdown' document.pk %}" class="btn btn-primary">Download Markdown</a>
 {% endblock %}
