@@ -18,3 +18,24 @@ body {
     background-color: var(--background);
     color: var(--grey);
 }
+
+button, input {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font: var(--main-font);
+    border-color: #b39841;
+    border: 2px solid;
+}
+
+button {
+    
+    background-color: var(--background);
+    border-color: #b39841;
+    color: #555555;
+}
+
+a.btn.btn-primary {
+    text-decoration: none;
+    color: #555555;
+}

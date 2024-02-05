@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Markdown Content</h2>
+<button><a href="{% url 'download_markdown' document.pk %}" class="btn btn-primary">Download Markdown</a></button>
+<button onclick="goBack()" class="btn btn-secondary">Go Back</button>
 <pre>{{ document.markdown_content }}</pre>
-<a href="{% url 'download_markdown' document.pk %}" class="btn btn-primary">Download Markdown</a>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 {% endblock %}
