@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['your-domain.com', '8000-michellecon-wordtomarkd-0gpdo35xqwm.ws-eu108.gitpod.io',]
+ALLOWED_HOSTS = ['your-domain.com', '8000-michellecon-wordtomarkd-0gpdo35xqwm.ws-eu108.gitpod.io', '8000-michellecon-wordtomarkd-p5lvtzzskhk.ws-eu108.gitpod.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-michellecon-wordtomarkd-0gpdo35xqwm.ws-eu108.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-michellecon-wordtomarkd-p5lvtzzskhk.ws-eu108.gitpod.io',]
 
 
 # Application definition
